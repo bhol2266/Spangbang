@@ -34,13 +34,13 @@ function PopunderAds() {
 
 //Exoclick ads
                 <>
-                    <Script
+                    {/* <Script
                         src="/popunderAds.js"
                         strategy="lazyOnload"
                         onLoad={() => {
                             console.log("Popunder Ad configuration script loaded successfully.");
                         }}
-                    />
+                    /> */}
 
                 </>
 

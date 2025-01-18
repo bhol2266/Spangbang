@@ -32,14 +32,14 @@ function Outstreams() {
 
 
             {/* Exoclick Ad   */}
-            <ins className="eas6a97888e37" data-zoneid="5517802"></ins>
+            {/* <ins className="eas6a97888e37" data-zoneid="5517802"></ins>
             <Script src="https://a.magsrv.com/ad-provider.js" strategy="beforeInteractive" />
             <Script
                 id={uniqid}
                 dangerouslySetInnerHTML={{
                     __html: `  (AdProvider = window.AdProvider || []).push({"serve": {}});`,
                 }}
-            />
+            /> */}
 
 
         </div>

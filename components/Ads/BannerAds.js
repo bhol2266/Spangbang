@@ -24,24 +24,24 @@ function BannerAds() {
 
 
 
-            <Script
+            {/* <Script
                 strategy="afterInteractive"
                 src="https://a.magsrv.com/ad-provider.js"
                 async
                 type="application/javascript"
-            />
+            /> */}
 
             {/* Inline script to initialize the AdProvider */}
-            <Script
+            {/* <Script
             id={uniqid}
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `(AdProvider = window.AdProvider || []).push({ "serve": {} });`,
                 }}
-            />
+            /> */}
 
             {/* The ad element */}
-            <ins className="eas6a97888e38" data-zoneid="5517814"></ins>
+            {/* <ins className="eas6a97888e38" data-zoneid="5517814"></ins> */}
 
 
         </div>
