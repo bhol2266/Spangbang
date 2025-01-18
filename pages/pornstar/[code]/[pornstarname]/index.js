@@ -135,28 +135,28 @@ function Index({ video_collection, pages, pornstarInformation, collageImages, po
 
 
                         <div className="font-inter flex-1 flex flex-wrap  mt-auto mb-[50px] ml-2 sm:ml-4 sm:mb-[40px] md:mb-0 text-xs md:text-sm md:space-x-4  space-x-1">
-                            <span className={`p-0.5 font-light ${pornstarInformation.views ? '' : 'hidden'}`}>
+                            <span className={`p-0.5 font-light text-white opacity-70 ${pornstarInformation.views ? '' : 'hidden'}`}>
                                 Views: <span className="font-semibold">{pornstarInformation.views}</span>
                             </span>
-                            <span className={`p-0.5 font-light ${pornstarInformation.videos ? '' : 'hidden'}`}>
+                            <span className={`p-0.5 font-light text-white opacity-70 ${pornstarInformation.videos ? '' : 'hidden'}`}>
                                 Videos: <span className="font-semibold">{pornstarInformation.videos}</span>
                             </span>
-                            <span className={`p-0.5 font-light ${pornstarInformation.age ? '' : 'hidden'}`}>
+                            <span className={`p-0.5 font-light text-white opacity-70 ${pornstarInformation.age ? '' : 'hidden'}`}>
                                 Age: <span className="font-semibold">{pornstarInformation.age}</span>
                             </span>
-                            <span className={`p-0.5 font-light ${pornstarInformation.from ? '' : 'hidden'}`}>
+                            <span className={`p-0.5 font-light text-white opacity-70 ${pornstarInformation.from ? '' : 'hidden'}`}>
                                 From: <span className="font-semibold">{pornstarInformation.from}</span>
                             </span>
-                            <span className={`p-0.5 font-light ${pornstarInformation.ethnicity ? '' : 'hidden'}`}>
+                            <span className={`p-0.5 font-light text-white opacity-70 ${pornstarInformation.ethnicity ? '' : 'hidden'}`}>
                                 Ethnicity: <span className="font-semibold">{pornstarInformation.ethnicity}</span>
                             </span>
-                            <span className={`p-0.5 font-light ${pornstarInformation.hairColor ? '' : 'hidden'}`}>
+                            <span className={`p-0.5 font-light text-white opacity-70 ${pornstarInformation.hairColor ? '' : 'hidden'}`}>
                                 Hair Color: <span className="font-semibold">{pornstarInformation.hairColor}</span>
                             </span>
-                            <span className={`p-0.5 font-light ${pornstarInformation.height ? '' : 'hidden'}`}>
+                            <span className={`p-0.5 font-light text-white opacity-70 ${pornstarInformation.height ? '' : 'hidden'}`}>
                                 Height: <span className="font-semibold">{pornstarInformation.height}</span>
                             </span>
-                            <span className={`p-0.5 font-light ${pornstarInformation.weight ? '' : 'hidden'}`}>
+                            <span className={`p-0.5 font-light text-white opacity-70 ${pornstarInformation.weight ? '' : 'hidden'}`}>
                                 Weight: <span className="font-semibold">{pornstarInformation.weight}</span>
                             </span>
                         </div>

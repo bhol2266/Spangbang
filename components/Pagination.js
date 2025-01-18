@@ -35,7 +35,7 @@ const Pagination = ({ data }) => {
 
                 <div className="flex items-center justify-center  rounded py-[1px]">
                     <p className="font-inter px-4 py-1 rounded text-theme_text  text-md sm:text-lg">{currentPageNumberURL}</p>
-                    <span className="mb-1 scale-125 text-theme_green">/</span>
+                    <span className="mb-1 scale-125 text-theme_pink">/</span>
                     <p className="font-inter px-4 py-1 rounded text-theme_text  text-md sm:text-lg">{pages[1]}</p>
                 </div>
 

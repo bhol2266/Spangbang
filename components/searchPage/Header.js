@@ -267,7 +267,7 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
                 <div className='flex items-center flex-wrap justify-start space-x-1 md:space-x-2 mb-2 md:mb-0 mr-1'>
                     {Final_filteredArray.map(item => {
                         return (
-                            <div key={item} onClick={() => { removefilter(item) }} className=' text-xs md:text-sm hover:bg-button_hover cursor-pointer bg-button rounded-lg px-2 py-1 flex items-center space-x-1'>
+                            <div key={item} onClick={() => { removefilter(item) }} className=' text-xs md:text-sm hover:bg-theme_pink_hover cursor-pointer bg-theme_pink rounded-lg px-2 py-1 flex items-center space-x-1'>
                                 <p className=' text-white font-inter ' >{item}</p>
                                 <XCircleIcon className='h-4 md:h-6 text-white' />
                             </div>
@@ -303,11 +303,11 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
                                             <Menu.Item key={item.name}  >
                                                 {({ active }) => (
                                                     <p onClick={() => { clickHandler(item.query) }} className={classNames(
-                                                        active ? 'bg-neutral-500 text-theme_green ' : 'text-white',
+                                                        active ? 'bg-neutral-500 text-theme_pink ' : 'text-white',
                                                         'block px-4 py-2 text-sm  hover:text-white hover:bg-neutral-500 cursor-pointer'
                                                     )}
                                                     >
-                                                        <span className={`${item.name === filter_isPresent ? "text-theme_green font-bold" : ""}`}>{item.name}</span>
+                                                        <span className={`${item.name === filter_isPresent ? "text-theme_pink font-bold" : ""}`}>{item.name}</span>
                                                     </p>
                                                 )}
                                             </Menu.Item>
@@ -350,11 +350,11 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
                                                 <Menu.Item key={item.name}  >
                                                     {({ active }) => (
                                                         <p onClick={() => { clickHandler(item.query) }} className={classNames(
-                                                            active ? 'bg-neutral-500 text-theme_green ' : 'text-white',
+                                                            active ? 'bg-neutral-500 text-theme_pink ' : 'text-white',
                                                             'block px-4 py-2 text-sm  hover:text-white hover:bg-neutral-500 cursor-pointer'
                                                         )}
                                                         >
-                                                            <span className={`${item.name === quality_isPresent ? "text-theme_green font-bold" : ""}`}>{item.name}</span>
+                                                            <span className={`${item.name === quality_isPresent ? "text-theme_pink font-bold" : ""}`}>{item.name}</span>
                                                         </p>
                                                     )}
                                                 </Menu.Item>
@@ -397,11 +397,11 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
                                                 <Menu.Item key={item.name}  >
                                                 {({ active }) => (
                                                     <p onClick={() => { clickHandler(item.query) }} className={classNames(
-                                                        active ? 'bg-neutral-500 text-theme_green ' : 'text-white',
+                                                        active ? 'bg-neutral-500 text-theme_pink ' : 'text-white',
                                                         'block px-4 py-2 text-sm  hover:text-white hover:bg-neutral-500 cursor-pointer'
                                                     )}
                                                     >
-                                                        <span className={`${item.name === duration_isPresent ? "text-theme_green font-bold" : ""}`}>{item.name}</span>
+                                                        <span className={`${item.name === duration_isPresent ? "text-theme_pink font-bold" : ""}`}>{item.name}</span>
                                                     </p>
                                                 )}
                                             </Menu.Item>
@@ -441,11 +441,11 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
                                                 <Menu.Item key={item.name}  >
                                                 {({ active }) => (
                                                     <p onClick={() => { clickHandler(item.query) }} className={classNames(
-                                                        active ? 'bg-neutral-500 text-theme_green ' : 'text-white',
+                                                        active ? 'bg-neutral-500 text-theme_pink ' : 'text-white',
                                                         'block px-4 py-2 text-sm  hover:text-white hover:bg-neutral-500 cursor-pointer'
                                                     )}
                                                     >
-                                                        <span className={`${item.name === date_isPresent ? "text-theme_green font-bold" : ""}`}>{item.name}</span>
+                                                        <span className={`${item.name === date_isPresent ? "text-theme_pink font-bold" : ""}`}>{item.name}</span>
                                                     </p>
                                                 )}
                                             </Menu.Item>

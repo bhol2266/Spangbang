@@ -155,20 +155,20 @@ export const SignUpForm = () => {
 
                     <div className=' p-4 lg:p-8  rounded-lg space-y-2 lg:space-y-4 mb-4 lg:mb-0'>
                         <div className='flex items-center space-x-2 lg:space-x-3   block'>
-                            <FaCheckCircle className='text-theme_green text-[14px] lg:text-[16px] flex-shrink-0' />
+                            <FaCheckCircle className='text-theme_pink text-[14px] lg:text-[16px] flex-shrink-0' />
                             <p className='text-theme_text font-inter text-[14px] lg:text-[16px]'>Unlimted Downloads!</p>
                         </div>
 
                         <div className='flex items-center space-x-2 lg:space-x-3  block'>
-                            <FaCheckCircle className='text-theme_green text-[14px] lg:text-[16px] flex-shrink-0' />
+                            <FaCheckCircle className='text-theme_pink text-[14px] lg:text-[16px] flex-shrink-0' />
                             <p className='text-theme_text font-inter text-[14px] lg:text-[16px]'>Video recommendations curated for you</p>
                         </div>
                         <div className='flex items-center space-x-2 lg:space-x-3  block'>
-                            <FaCheckCircle className='text-theme_green text-[14px] lg:text-[16px] flex-shrink-0' />
+                            <FaCheckCircle className='text-theme_pink text-[14px] lg:text-[16px] flex-shrink-0' />
                             <p className='text-theme_text font-inter text-[14px] lg:text-[16px]'>Subscribe to channels and pornstars</p>
                         </div>
                         <div className='flex items-center space-x-2 lg:space-x-3  block'>
-                            <FaCheckCircle className='text-theme_green text-[14px] lg:text-[16px] flex-shrink-0' />
+                            <FaCheckCircle className='text-theme_pink text-[14px] lg:text-[16px] flex-shrink-0' />
                             <p className='text-theme_text font-inter text-[14px] lg:text-[16px]'>Create and enjoy playlists</p>
                         </div>
 
@@ -248,14 +248,14 @@ export const SignUpForm = () => {
                         </div>
 
                         <div>
-                            <button type="submit" className="relative mt-[20px] flex w-full h-[35px] justify-center rounded-md bg-gray-200 px-3 py-1.5 shadow-sm ">
+                            <button type="submit" className="relative mt-[20px] flex w-full h-[35px] justify-center rounded-md bg-theme_pink px-3 py-1.5 shadow-sm ">
 
                                 {loading &&
                                     <div className='w-fit absolute'>
                                         <ClipLoader color="#232b2b" size={25} />
                                     </div>
                                 }
-                                {!loading && <p className=" text-sm font-inter leading-6 text-theme_text font-inter font-semibold"> Join Xhamster!</p>}
+                                {!loading && <p className=" text-sm font-inter leading-6 text-white font-semibold"> Join Xhamster!</p>}
                             </button>
                         </div>
                     </form>
@@ -266,7 +266,7 @@ export const SignUpForm = () => {
 
                     <p className="my-3 text-center text-sm text-theme_text">
                         Already have an account?
-                        <span onClick={() => { loginHere() }} className="underline cursor-pointer text-theme_green"> Login here</span>
+                        <span onClick={() => { loginHere() }} className="underline cursor-pointer text-theme_pink"> Login here</span>
                     </p>
 
 
@@ -299,7 +299,7 @@ export const SignUpForm = () => {
                             By Registering, I certify that I am over 18 years old and I agree to
                         </p>
                         <Link href="/terms">
-                            <p className='text-xs text-center font-inter font-semibold text-theme_green hover:underline cursor-pointer'>
+                            <p className='text-xs text-center font-inter font-semibold text-theme_pink hover:underline cursor-pointer'>
                                 Terms of Service.
                             </p>
                         </Link>

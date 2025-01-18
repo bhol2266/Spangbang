@@ -163,7 +163,7 @@ function Navbar() {
 
     return (
 
-        <div className='font-inter  shadow bg-black'>
+        <div className='font-inter  shadow bg-theme_navbar'>
 
             <div className=" p-2  lg:hidden">
 
@@ -175,11 +175,9 @@ function Navbar() {
                                 <div className='flex items-center space-x-1' >
 
                                     <Link href='/'>
-                                        <img src='/logo.png' alt="logo" className='w-[50px] h-[50px] object-cover object-top' />
+                                        <img src='https://assets.sb-cd.com/static/common/Images/logo.svg' alt="logo" className=' h-[40px] object-cover object-top' />
                                     </Link>
-                                    <Link href='/'>
-                                        <img src='/logo_text.png' alt="logo" className='w-fit h-[30px] mt-2' />
-                                    </Link>
+
 
                                     {location &&
                                         <div className='cursor-pointer' onClick={handleClickFlag}>
@@ -204,7 +202,7 @@ function Navbar() {
 
                                 <div className='flex items-center'>
 
-                                    <div onClick={handleSearchIconClick} className=' lg:hidden mr-2 cursor-pointer p-2  hover:bg-button  rounded-md '>
+                                    <div onClick={handleSearchIconClick} className=' lg:hidden mr-2 cursor-pointer p-2  hover:bg-theme_pink  rounded-md '>
                                         <SearchIcon className='h-6 w-6 text-theme_text' />
                                     </div>
 
@@ -237,7 +235,7 @@ function Navbar() {
 
                                                 {!user &&
                                                     <Menu.Item>
-                                                        <button onClick={() => setLoginModalVisible(true)} className='block_popunder text-white w-[150px] h-[30px] text-[11px] font-inter px-[25px] py-[7px] bg-button hover:bg-button_hover rounded mt-[24px] mx-auto'>
+                                                        <button onClick={() => setLoginModalVisible(true)} className='block_popunder text-white w-[150px] h-[30px] text-[11px] font-inter px-[25px] py-[7px] bg-theme_pink hover:bg-theme_pink_hover rounded mt-[24px] mx-auto'>
                                                             Sign In / Sign Up
                                                         </button>
                                                     </Menu.Item>
@@ -252,7 +250,7 @@ function Navbar() {
 
                                                 {user &&
                                                     <Menu.Item>
-                                                        <button onClick={signOut_method} className='text-theme_text w-[150px] h-[30px] text-[11px] font-inter px-[25px] py-[7px] bg-button hover:bg-button_hover rounded mt-[8px] mx-auto'>
+                                                        <button onClick={signOut_method} className='text-theme_text w-[150px] h-[30px] text-[11px] font-inter px-[25px] py-[7px] bg-theme_pink hover:bg-theme_pink_hover rounded mt-[8px] mx-auto'>
                                                             Sign Out
                                                         </button>
                                                     </Menu.Item>
@@ -267,7 +265,7 @@ function Navbar() {
                                     </Menu>
 
 
-                                    <Disclosure.Button className="lg:hidden items-center justify-center rounded-md text-white hover:bg-button p-2">
+                                    <Disclosure.Button className="lg:hidden items-center justify-center rounded-md text-white hover:bg-theme_pink p-2">
                                         <span className="sr-only">Open main menu</span>
                                         {open ? (
                                             <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -302,7 +300,7 @@ function Navbar() {
                                                 <Disclosure.Button
                                                     as="a"
                                                     className={classNames(
-                                                        item.current ? 'bg-button_hover text-white font-semibold' : 'text-theme_text hover:bg-button_hover ',
+                                                        item.current ? 'bg-theme_pink_hover text-white font-semibold' : 'text-theme_text hover:bg-button ',
                                                         'block px-3 py-2 rounded-md text-base font-medium'
                                                     )}
                                                     aria-current={item.current ? 'page' : undefined}
@@ -321,13 +319,13 @@ function Navbar() {
                 <div className={`flex flex-col relative p-1 ${searchBarVisibility}  transition ease-in-out delay-150 mt-2 `}>
 
 
-                    <form className="flex w-full items-center" onSubmit={goSearch}>
-                        <div className="flex-grow mr-4">
+                    <form className="flex w-full items-center " onSubmit={goSearch}>
+                        <div className="flex-grow mr-4 rounded-[15px] bg-button">
                             <input
                                 value={searchKey}
                                 onChange={getSuggestedTags}
                                 ref={searchInputref}
-                                className="w-full h-[35px] px-4 text-sm text-white border-[0.8px] border-semiblack rounded-[15px] bg-transparent outline-none"
+                                className="w-full h-[35px] px-4 text-sm text-white bg-transparent  outline-none"
                                 type="text"
                                 placeholder="Search your favourite videos"
                             />
@@ -335,7 +333,7 @@ function Navbar() {
                         <div className="w-[18%]">
                             <button
                                 type="submit"
-                                className="w-full p-2 text-sm text-white bg-button rounded-[15px] hover:bg-button_hover"
+                                className="w-full px-2 py-1.5 text-sm text-button font-bold bg-button_yellow rounded-[15px] hover:bg-theme_pink_hover"
                             >
                                 Search
                             </button>
@@ -345,12 +343,12 @@ function Navbar() {
 
                     </form>
                     {showSuggested &&
-                        <div className=' max-h-[300px] mt-1.5 z-50  overflow-scroll scrollbar-hide'>
+                        <div className=' max-h-[300px] mt-1.5 z-50  overflow-scroll scrollbar-hide bg-[#11181F]'>
                             {tags.map(tag => {
                                 return (
                                     <div key={tag} onClick={() => {
                                         setsearchKey(tag); setshowSuggested(false); router.push(`/search/${tag.trim()}`)
-                                    }} className='flex items-center space-x-2 p-2  cursor-pointer hover:bg-gray-200 pl-4 hover:rounded-[15px] hover:text-white text-white'>
+                                    }} className='flex items-center space-x-2 p-2  cursor-pointer  pl-4  hover:text-theme_pink text-white opacity-70 hover:bg-semiblack'>
                                         {/* <img src='/login/history.png' className='h-[20px]' /> */}
                                         <p className='text-[13px] fontinter  '>{tag}</p>
 
@@ -368,10 +366,10 @@ function Navbar() {
 
             </div>
 
-            <div className='flex justify-around items-center lg:hidden font-arial shadow-lg mb-2'>
+            <div className='flex justify-around items-center lg:hidden font-arial shadow-lg mb-2 bg-[#18222B]'>
                 <Link href='/' legacyBehavior>
                     <a
-                        className={`sm:text-xl xl:text-[28px] text-md text-theme_text text-center p-1 border-b-[3px] ${currentPath === '/' ? 'border-theme_green' : 'hover:border-theme_green border-transparent'}`}
+                        className={`sm:text-lg xl:text-[28px] text-md text-theme_text text-center p-1  ${currentPath === '/' ? 'scale-105 font-bold' : 'opacity-80 border-transparent'}`}
                         rel="dofollow"
                     >
                         Home
@@ -380,7 +378,7 @@ function Navbar() {
 
                 <Link href='/category' legacyBehavior>
                     <a
-                        className={`sm:text-xl xl:text-[28px] text-md text-theme_text text-center p-1 border-b-[3px] ${currentPath === '/category' ? 'border-theme_green' : 'hover:border-theme_green border-transparent'}`}
+                        className={`sm:text-lg xl:text-[28px] text-md text-theme_text text-center p-1  ${currentPath === '/category' ? 'scale-105 font-bold' : 'opacity-80 border-transparent'}`}
                         rel="dofollow"
                     >
                         Categories
@@ -389,12 +387,12 @@ function Navbar() {
 
                 <Link href='/channels' legacyBehavior>
                     <a
-                        className={`group flex items-center justify-center space-x-1 -mb-1 pb-1 border-b-[3px] ${currentPath === '/channels' ? 'border-theme_green' : 'hover:border-theme_green border-transparent'}`}
+                        className={`group flex items-center justify-center space-x-1 -mb-1 pb-1  ${currentPath === '/channels' ? 'scale-105 font-bold' : 'opacity-80 border-transparent'}`}
                         rel="dofollow"
                     >
                         <MdLiveTv className='h-5 w-5 text-gray-400' />
 
-                        <span className={`sm:text-xl xl:text-[28px] text-md text-theme_text text-center mb-0`}>
+                        <span className={`sm:text-lg xl:text-[28px] text-md text-theme_text text-center mb-0`}>
                             Channels
                         </span>
                     </a>
@@ -420,7 +418,7 @@ function Navbar() {
 
                     <div className='flex items-center space-x-1 md:space-x-3  ml-2' >
                         <Link href='/'>
-                            <img className="ml-[90px] w-[180px]" src='/logo_text.png' alt='logo_text'   ></img>
+                            <img className=" h-[40px]" src='https://assets.sb-cd.com/static/common/Images/logo.svg' alt='logo_text'   ></img>
                         </Link>
 
                         <a target="_blank" href={countryBlocked ? "https://go.xxxiijmp.com/?userId=9ea31ff27db3b7242eabcc2d26ac0eaf38f093c68528e70c2e7f5a72df55c42e" : "https://chaturbate.com/in/?tour=LQps&campaign=3v7pk&track=default&room=ukdevelopers"} rel="noopener noreferrer">
@@ -459,7 +457,7 @@ function Navbar() {
 
 
                         <div className='relative select-none'>
-                            <div className="flex  items-center w-[250px] lg:w-[300px] 2xl:w-[700px]  border-[0.8px] border-semiblack rounded-[30px] p-0.5 2xl:p-1 2xl:px-4 px-4">
+                            <div className="flex bg-button items-center w-[250px] lg:w-[300px] 2xl:w-[700px]  rounded-[30px] p-0.5 2xl:p-1 2xl:px-4 px-4">
                                 <SearchIcon className="h-5 2xl:h-6 text-white" />
                                 <input
                                     value={searchKey}
@@ -471,12 +469,12 @@ function Navbar() {
                                 />
                             </div>
                             {showSuggested &&
-                                <div className=' rounded-[20px] absolute top-[55px] left-0 right-0 max-h-[300px] z-50  overflow-scroll scrollbar-hide bg-semiblack'>
+                                <div className=' rounded-[20px] absolute top-[45px] left-0 right-0 max-h-[300px] z-50  overflow-scroll scrollbar-hide bg-[#11181F]'>
                                     {tags.map(tag => {
                                         return (
                                             <div key={tag} onClick={() => {
                                                 setsearchKey(tag); setshowSuggested(false); router.push(`/search/${tag.trim()}`)
-                                            }} className='flex items-center space-x-2 py-2  px-[50px] cursor-pointer hover:bg-gray-500  text-white '>
+                                            }} className='flex items-center space-x-2 py-2  px-[50px] cursor-pointer hover:text-theme_pink text-white opacity-70 hover:bg-semiblack '>
                                                 <p className='text-[15px] font-inter '>{tag}</p>
 
                                             </div>
@@ -485,7 +483,7 @@ function Navbar() {
                                 </div>
                             }
                         </div>
-                        <button type="submit" className={`ml-2 bg-button hover:bg-button_hover text-white text-sm h-10 px-8 m-1.5 rounded-[20px] transition-all duration-300 ease-in-out ${searchKey ? 'opacity-100 visible' : 'opacity-0 hidden 2xl:flex'}`}    >
+                        <button type="submit" className={`ml-2 bg-button_yellow hover:bg-theme_pink_hover text-button font-bold text-sm h-10 px-8 m-1.5 rounded-[20px] transition-all duration-300 ease-in-out ${searchKey ? 'opacity-100 visible' : 'opacity-0 hidden 2xl:flex'}`}    >
                             Search
                         </button>
 
@@ -498,7 +496,7 @@ function Navbar() {
                             {/* <UserIcon className='h-8 w-8' /> */}
                             {!user &&
                                 <div className='flex items-center space-x-2  font-inter'>
-                                    <p onClick={() => setLoginModalVisible(true)} className=' m-2 text-white    hover:bg-button_hover px-8 rounded-[22px] py-[5px]  cursor-pointer block_popunder border-[0.8px] border-semiblack '>Login</p>
+                                    <p onClick={() => setLoginModalVisible(true)} className=' m-2 text-white font-semibold   hover:bg-theme_pink_hover px-8 rounded-[22px] py-[5px]  cursor-pointer block_popunder  '>Login</p>
                                     {/* <p onClick={() => { router.push('/account/register') }} className='m-1 underline rounded   pl-2 pr-2  cursor-pointer hover:text-white'>Register</p> */}
                                 </div>
                             }
@@ -533,15 +531,15 @@ function Navbar() {
 
 
 
-                <div className='w-full  text-white items-center justify-around   flex  px-1 shadow-lg pl-[100px]'>
+                <div className='w-full bg-[#18222B]  text-white items-center justify-around   flex  px-1 shadow-lg pl-[30px]'>
                     {navigation.map(item => {
                         const isActive = currentPath === item.href;
 
                         return (
                             <Link href={item.href} legacyBehavior key={item.name}>
                                 <a rel="dofollow"
-                                    className={`text-xl 2xl:text-2xl font-medium text-theme_text cursor-pointer p-1 border-b-4 
-                    ${isActive ? 'border-theme_green' : 'border-transparent hover:border-theme_green'}
+                                    className={`text-lg 2xl:texxl  opacity-100 cursor-pointer p-1 
+                    ${isActive ? 'font-bold scale-110' : 'opacity-70 font-medium border-transparent hover:border-theme_pink'}
                     transition-colors duration-300`}
                                 >
                                     {item.name}
@@ -550,10 +548,6 @@ function Navbar() {
                         )
                     })}
 
-
-                    <Link href='/'>
-                        <img src='/logo.png' alt="logo" className='w-[100px] h-[110px] object-cover object-top absolute left-2  top-2' />
-                    </Link>
 
                 </div>
 

@@ -219,7 +219,7 @@ export default function Home({ video_collection, trendingChannels, tags, trendin
       <main className="flex-row flex  mt-1 md:mt-2 md:space-x-3">
         {/* <Sidebar /> */}
         <div className='w-full overflow-hidden'>
-          <h1 className="lg:text-xl text-lg text-white my-3 font-inter basicMargin w-fit border-b-[3px] border-theme_green">Trending Free Porn Videos</h1>
+          <h1 className="lg:text-xl text-lg text-white my-3 font-inter basicMargin w-fit border-b-[3px] border-theme_pink">Trending Free Porn Videos</h1>
           <Videos data={video_collection[0].finalDataArray} />
           <a href={`/trending`}>
             <img src='/more_video.png' className='mx-auto h-10 md:h-[44px] 2xl:h-[54px] mb-4 cursor-pointer hover:scale-105 transition-transform duration-300' alt="More Trending Videos" />

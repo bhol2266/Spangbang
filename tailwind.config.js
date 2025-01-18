@@ -34,12 +34,14 @@ module.exports = {
         'github': '#24292F',
         'color': '#414a4c',
         'theme': '#13274F',
-        'button': '#6B7280 ',
+        'button': '#380804 ',
+        'button_yellow': '#FCBA23 ',
         'button_hover': '#9ca3af',
         'semiblack': '#232b2b',
         'theme_red': '#ef4444',
-        'theme_green': '#AAFF00',
+        'theme_pink': '#f08e84',
         'theme_yellow': '#E4D00A',
+        'theme_navbar': '#60140C',
         'theme_text': '#D1D5DB', //gray-300
 
       },

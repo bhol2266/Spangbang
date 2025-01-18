@@ -135,8 +135,8 @@ export const LoginForm = () => {
 
             <div className="flex flex-col justify-center">
 
-                <img src='/logo_text.png' alt="chutlunds-logo" className='w-[200px] mx-auto  lg:w-[220px] mx-auto lg:-mt-2' />
-                <p className='mb-6 font-inter text-theme_text text-center text font-dancing text-ll'>Unleash your desires!   </p>
+                <img src='https://assets.sb-cd.com/static/common/Images/logo.svg' alt="chutlunds-logo" className=' mx-auto  h-[40px]  lg:-mt-2' />
+                <p className='mb-6  text-theme_text text-center text font-dancing text-ll'>Unleash your desires!   </p>
 
 
                 <div className="">
@@ -171,20 +171,20 @@ export const LoginForm = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="relative mt-[20px] flex w-full h-[40px] justify-center items-center space-x-1 rounded-md bg-gray-200 px-3 py-1.5 shadow-sm ">
+                        <button type="submit" className="relative mt-[20px] flex w-full h-[40px] justify-center items-center space-x-1 rounded-md bg-theme_pink px-3 py-1.5 shadow-sm ">
 
                             {loading &&
                                 <div className='w-fit absolute top-2'>
                                     <ClipLoader color="#232b2b" size={25} />
                                 </div>
                             }
-                            {!loading && <CiLogin className="text-theme_text text-xl mt-1" />}
+                            {!loading && <CiLogin className="text-white text-xl mt-1" />}
 
-                            {!loading && <p className=" text-sm font-inter leading-6 text-theme_text font-inter font-semibold mt-1">Login</p>}
+                            {!loading && <p className=" text-sm leading-6 text-white font-inter font-semibold mt-1">Login</p>}
                         </button>
 
 
-                        <p className="text-red-500 font-inter text-xs text-center min-h-4">{message}</p>
+                        <p className="text-theme_pink font-inter text-xs text-center min-h-4">{message}</p>
 
 
                     </form>
@@ -195,7 +195,7 @@ export const LoginForm = () => {
                     </p>
                     <p className="mb-2 text-center text-sm text-theme_text">
                         Don't have an account?
-                        <span onClick={() => { setSignUpFormVisible(true); setLoginFormVisible(false) }} className="underline cursor-pointer text-theme_red">Register here</span>
+                        <span onClick={() => { setSignUpFormVisible(true); setLoginFormVisible(false) }} className="underline cursor-pointer text-theme_pink">Register here</span>
                     </p>
 
 
@@ -226,7 +226,7 @@ export const LoginForm = () => {
                             By Registering, I certify that I am over 18 years old and I agree to
                         </p>
                         <Link href="/terms">
-                            <p className='text-xs text-center font-inter font-semibold text-theme_red hover:underline cursor-pointer'>
+                            <p className='text-xs text-center font-inter font-semibold text-theme_pink hover:underline cursor-pointer'>
                                 Terms of Service.
                             </p>
                         </Link>

@@ -45,7 +45,7 @@ function Videos({ data, type }) {
                     <LightningBoltIcon className="h-8 text-red-500" />
                     <span className="font-inter text-sm md:text-md">We could not find any videos</span>
                     <span className="font-inter md:text-lg font-semibold text-theme text-center">Repeat your search with another keyword or filter</span>
-                    <button onClick={() => router.back()} className="bg-button rounded-lg font-inter text-white px-3 py-1 hover:bg-button_hover">Go Back</button>
+                    <button onClick={() => router.back()} className="bg-theme_pink rounded-lg font-inter text-white px-3 py-1 hover:bg-theme_pink_hover">Go Back</button>
                 </div>
             }
 

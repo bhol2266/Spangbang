@@ -23,7 +23,7 @@
     body {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
-        background-color: #000000; /* Replace with your desired color */
+        background-color: #11181F; /* Replace with your desired color */
         margin: 0; /* Optional: Removes default browser margins */
         padding: 0;
         box-sizing: border-box;
@@ -170,8 +170,8 @@
 /* Base styles */
 @layer base {
 
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
+    input[type="number"]::-webkit-inner-spin-theme_pink,
+    input[type="number"]::-webkit-outer-spin-theme_pink {
         -webkit-appearance: none;
         margin: 0;
     }

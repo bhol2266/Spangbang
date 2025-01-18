@@ -157,7 +157,7 @@ export const SignUpFormOTP = () => {
                     </div>
 
                     <div className='mb-6 min-h-[30px] xl:min-h-[40px] mt-3'>
-                        <p className={` rounded text-center w-full  text-[14px] xl:text-[16px] ${message == "OTP Sent Again!" ? "text-theme_green" : "text-red-500"}  font-semibold px-1 pb-1 mt-1 ${message.length > 0 ? "visible" : "invisible"}`}>{message}</p>
+                        <p className={` rounded text-center w-full  text-[14px] xl:text-[16px] ${message == "OTP Sent Again!" ? "text-theme_pink" : "text-red-500"}  font-semibold px-1 pb-1 mt-1 ${message.length > 0 ? "visible" : "invisible"}`}>{message}</p>
                     </div>
 
 
@@ -165,11 +165,11 @@ export const SignUpFormOTP = () => {
                     <h2 className='text-center w-full font-inter text-[13px] lg:text-[15px] mt-[14px] text-semiblack'>
                         By continuing, you agree to Chutlunds&apos;s{' '}
                         <Link legacyBehavior href="/terms">
-                            <a className="text-theme_green hover:underline"> Terms of Use</a>
+                            <a className="text-theme_pink hover:underline"> Terms of Use</a>
                         </Link>{' '}
                         and{' '}
                         <Link legacyBehavior href="/privacy">
-                            <a className="text-theme_green hover:underline">Privacy Policy</a>
+                            <a className="text-theme_pink hover:underline">Privacy Policy</a>
                         </Link>.
                     </h2>
 

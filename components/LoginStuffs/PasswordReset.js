@@ -204,7 +204,7 @@ export const PasswordReset = () => {
 
                         {OTP_Sent === 0 &&
                             <div className=' mt-[3px]'>
-                                <p className={`${message == "Password Updated!" ? "text-theme_green" : "text-red-500"} rounded text-center w-full  text-[14px] xl:text-[16px] text-red-500 px-2 py-1 ${message.length > 0 ? "block" : "hidden"}`}>{message}</p>
+                                <p className={`${message == "Password Updated!" ? "text-theme_pink" : "text-red-500"} rounded text-center w-full  text-[14px] xl:text-[16px] text-red-500 px-2 py-1 ${message.length > 0 ? "block" : "hidden"}`}>{message}</p>
                             </div>
                         }
                     </div>
@@ -233,7 +233,7 @@ export const PasswordReset = () => {
                             </div>
 
                             <div className='mb-6 min-h-[30px] xl:min-h-[40px]'>
-                                <p className={` rounded text-center w-full  text-[16px] xl:text-[18px] text-theme_green px-1 py-1 ${message.length > 0 ? "visible" : "invisible"}`}>{message}</p>
+                                <p className={` rounded text-center w-full  text-[16px] xl:text-[18px] text-theme_pink px-1 py-1 ${message.length > 0 ? "visible" : "invisible"}`}>{message}</p>
                             </div>
 
                             <div className='flex flex-col items-center justify-start w-full space-y-3'>

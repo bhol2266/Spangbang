@@ -57,7 +57,7 @@ const PaginationQuery = ({ data }) => {
 
             <div className={`${parseInt(currentPageNumberURL) === 1 || parseInt(currentPageNumberURL) === parseInt(pages[pages.length - 2]) ? "justify-around" : "justify-between"} flex items-center   md:justify-center`}>
 
-                <button onClick={() => { clickHandler(parseInt(currentPageNumberURL) - 1) }} className={`${parseInt(currentPageNumberURL) === 1 ? "hidden" : ""} scale-90 md:scale-100 font-inter sm:text-med font-bold   sm:mx-4  rounded-lg bg-gray-700 px-6 py-2 text-white hover:bg-button_hover`}>{'<'}</button>
+                <button onClick={() => { clickHandler(parseInt(currentPageNumberURL) - 1) }} className={`${parseInt(currentPageNumberURL) === 1 ? "hidden" : ""} scale-90 md:scale-100 font-inter sm:text-med font-bold   sm:mx-4  rounded-lg bg-gray-700 px-6 py-2 text-white hover:bg-theme_pink_hover`}>{'<'}</button>
 
                 <div className="flex items-center justify-center  rounded py-[1px]">
                     <p className="font-inter px-4 py-1 rounded text-gray-700  text-md sm:text-lg">{currentPageNumberURL}</p>
@@ -67,7 +67,7 @@ const PaginationQuery = ({ data }) => {
 
 
 
-                <button onClick={() => { clickHandler(parseInt(currentPageNumberURL) + 1) }} className={`${parseInt(currentPageNumberURL) === parseInt(pages[pages[1].trim()]) ? "hidden" : ""} scale-90 md:scale-100 font-inter sm:text-med font-bold   sm:mx-4  rounded-lg bg-gray-700 px-6 py-2 text-white hover:bg-button_hover ml-1`}>{'>'}</button>
+                <button onClick={() => { clickHandler(parseInt(currentPageNumberURL) + 1) }} className={`${parseInt(currentPageNumberURL) === parseInt(pages[pages[1].trim()]) ? "hidden" : ""} scale-90 md:scale-100 font-inter sm:text-med font-bold   sm:mx-4  rounded-lg bg-gray-700 px-6 py-2 text-white hover:bg-theme_pink_hover ml-1`}>{'>'}</button>
 
             </div>
 
