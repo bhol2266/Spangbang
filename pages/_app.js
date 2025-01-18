@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta property="og:image" content="/logo.png" />
-        <meta property="og:url" content="https://www.MilfyMadness.com" />
+        <meta property="og:url" content="https://www.spankbang.gg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/logo.png" />

@@ -183,13 +183,13 @@ export default function Home({ video_collection, trendingChannels, tags, trendin
   return (
     <div className=" ">
       <Head>
-        <title>Watch hot porn videos for free at MilfyMadness!</title>
-        <meta name="description" content="Looking for free porn videos and exclusive XXX movies? Look no further than MilfyMadness. With instant streaming of over 6 million hardcore sex videos from both professionals and amateurs, our high-quality porn tube has everything you need to satisfy your desires. Whether you're looking for sensual solo scenes or wild group sex, MilfyMadness has it all. Join us now and start exploring our vast collection of adult content." />
+        <title>Watch hot porn videos for free at SpankBang!</title>
+        <meta name="description" content="Looking for free porn videos and exclusive XXX movies? Look no further than SpankBang. With instant streaming of over 6 million hardcore sex videos from both professionals and amateurs, our high-quality porn tube has everything you need to satisfy your desires. Whether you're looking for sensual solo scenes or wild group sex, SpankBang has it all. Join us now and start exploring our vast collection of adult content." />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="msvalidate.01" content="8A6530C78E46DD0011117B2ECB618480" />
-        <meta property="og:title" content="Watch hot porn videos for free at MilfyMadness!" />
-        <meta property="og:description" content="Looking for free porn videos and exclusive XXX movies? Look no further than MilfyMadness. With instant streaming of over 6 million hardcore sex videos from both professionals and amateurs, our high-quality porn tube has everything you need to satisfy your desires. Whether you're looking for sensual solo scenes or wild group sex, MilfyMadness has it all. Join us now and start exploring our vast collection of adult content." />
-        <link rel="canonical" href={`https://www.MilfyMadness.com/`} />
+        <meta property="og:title" content="Watch hot porn videos for free at SpankBang!" />
+        <meta property="og:description" content="Looking for free porn videos and exclusive XXX movies? Look no further than SpankBang. With instant streaming of over 6 million hardcore sex videos from both professionals and amateurs, our high-quality porn tube has everything you need to satisfy your desires. Whether you're looking for sensual solo scenes or wild group sex, SpankBang has it all. Join us now and start exploring our vast collection of adult content." />
+        <link rel="canonical" href={`https://www.spankbang.gg/`} />
 
       </Head>
 

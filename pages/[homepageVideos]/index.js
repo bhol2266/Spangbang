@@ -37,7 +37,7 @@ function HomepageVideos({ video_collection, pages }) {
                 <meta name="twitter:title" content={`${capitalizeFirstLetter(homepageVideos)} Porn Videos`} />
                 <meta name="twitter:description" content={`${capitalizeFirstLetter(homepageVideos)} Porn Videos!`} />
                 <meta name="twitter:card" content="summary_large_image" />
-                <link rel="canonical" href={`https://www.milfymadness.com/${homepageVideos}/`} />
+                <link rel="canonical" href={`https://www.spankbang.gg/${homepageVideos}/`} />
 
             </Head>
             <Header keyword={homepageVideos} pageNumber={currentPageNumberURL} />

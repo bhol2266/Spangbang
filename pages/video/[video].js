@@ -162,15 +162,15 @@ const Videoplayer = () => {
             {preloadedVideoQuality.length > 0 && !noVideo ? (
                 <>
                     <Head>
-                        <title>{`${noVideo ? videoTitleBackup : videoDetails.Title} - ${noVideo ? "720p" : videolinkQualitiesScreenshots.video_qualities_available[videolinkQualitiesScreenshots.video_qualities_available.length - 1].toUpperCase()}`} | MilfyMadness</title>
-                        <meta name="description" content={`Watch  ${capitalizeFirstLetter(noVideo ? videoTitleBackup : videoDetails.Title)} on MilfyMadness `} />
+                        <title>{`${noVideo ? videoTitleBackup : videoDetails.Title} - ${noVideo ? "720p" : videolinkQualitiesScreenshots.video_qualities_available[videolinkQualitiesScreenshots.video_qualities_available.length - 1].toUpperCase()}`} | SpankBang</title>
+                        <meta name="description" content={`Watch  ${capitalizeFirstLetter(noVideo ? videoTitleBackup : videoDetails.Title)} on SpankBang `} />
                         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                         <meta name="keywords" content={tagString} />
                         <meta property="og:title" content={`${noVideo ? videoTitleBackup : videoDetails.Title} - ${noVideo ? "720p" : videolinkQualitiesScreenshots.video_qualities_available[videolinkQualitiesScreenshots.video_qualities_available.length - 1].toUpperCase()}`} />
-                        <meta property="og:description" content={`Watch  ${capitalizeFirstLetter(noVideo ? videoTitleBackup : videoDetails.Title)} on MilfyMadness `} />
+                        <meta property="og:description" content={`Watch  ${capitalizeFirstLetter(noVideo ? videoTitleBackup : videoDetails.Title)} on SpankBang `} />
                         <meta name="twitter:title" content={`${noVideo ? videoTitleBackup : videoDetails.Title} - ${noVideo ? "720p" : videolinkQualitiesScreenshots.video_qualities_available[videolinkQualitiesScreenshots.video_qualities_available.length - 1].toUpperCase()}`} />
-                        <meta name="twitter:description" content={`Watch  ${capitalizeFirstLetter(noVideo ? videoTitleBackup : videoDetails.Title)} on MilfyMadness `} />
-                        <link rel="canonical" href={`https://www.MilfyMadness.gg/video/${video}`} />
+                        <meta name="twitter:description" content={`Watch  ${capitalizeFirstLetter(noVideo ? videoTitleBackup : videoDetails.Title)} on SpankBang `} />
+                        <link rel="canonical" href={`https://www.SpankBang.gg/video/${video}`} />
 
                     </Head>
 
@@ -213,8 +213,8 @@ const Videoplayer = () => {
 
                 <>
                     <Head>
-                        <title>{`${videoTitleBackup}`} | MilfyMadness</title>
-                        <meta name="description" content={`Watch ${capitalizeFirstLetter(videoTitleBackup)} on MilfyMadness `} />
+                        <title>{`${videoTitleBackup}`} | SpankBang</title>
+                        <meta name="description" content={`Watch ${capitalizeFirstLetter(videoTitleBackup)} on SpankBang `} />
                         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                     </Head>
                     <div>

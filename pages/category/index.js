@@ -56,15 +56,15 @@ function Index() {
 
         <div className="basicMargin">
             <Head>
-                <title>Explore Porn Video Categories and a variety of Sex Niches on MilfyMadness</title>
-                <meta name="description" content="Check out our extensive list of all porn video categories on MilfyMadness, featuring even the rarest sex niches. Discover the XXX videos that cater to your preferences!" />
+                <title>Explore Porn Video Categories and a variety of Sex Niches on SpankBang</title>
+                <meta name="description" content="Check out our extensive list of all porn video categories on SpankBang, featuring even the rarest sex niches. Discover the XXX videos that cater to your preferences!" />
 
 
-                <meta property="og:title" content="Explore Porn Video Categories and a variety of Sex Niches on MilfyMadness" />
-                <meta property="og:description" content="Check out our extensive list of all porn video categories on MilfyMadness, featuring even the rarest sex niches. Discover the XXX videos that cater to your preferences!" />
-                <meta name="twitter:title" content="Explore Porn Video Categories and a variety of Sex Niches on MilfyMadness" />
-                <meta name="twitter:description" content="Check out our extensive list of all porn video categories on MilfyMadness, featuring even the rarest sex niches. Discover the XXX videos that cater to your preferences!" />
-                <link rel="canonical" href={`https://www.milfymadness.com/category`} />
+                <meta property="og:title" content="Explore Porn Video Categories and a variety of Sex Niches on SpankBang" />
+                <meta property="og:description" content="Check out our extensive list of all porn video categories on SpankBang, featuring even the rarest sex niches. Discover the XXX videos that cater to your preferences!" />
+                <meta name="twitter:title" content="Explore Porn Video Categories and a variety of Sex Niches on SpankBang" />
+                <meta name="twitter:description" content="Check out our extensive list of all porn video categories on SpankBang, featuring even the rarest sex niches. Discover the XXX videos that cater to your preferences!" />
+                <link rel="canonical" href={`https://www.spankbang.gg/category`} />
 
 
 

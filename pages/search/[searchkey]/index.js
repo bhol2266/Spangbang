@@ -44,15 +44,15 @@ function Search({ video_collection, pages }) {
   return (
     <>
       <Head>
-        <title>{`${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} Porn Videos - MilfyMadness`}</title>
-        <meta name="description" content={`Watch ${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} porn videos. Explore tons of XXX movies with sex scenes in ${getcurrentyear()} on MilfyMadness!`} />
-        <meta property="og:title" content={`${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} Porn Videos - MilfyMadness | ${currentPageNumberURL}`} />
-        <meta property="og:description" content={`Watch ${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} porn videos. Explore tons of XXX movies with sex scenes in ${getcurrentyear()} on MilfyMadness!`} />
-        <meta name="twitter:title" content={`${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} Porn Videos - MilfyMadness | ${currentPageNumberURL}`} />
-        <meta name="twitter:description" content={`Watch ${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} porn videos. Explore tons of XXX movies with sex scenes in ${getcurrentyear()} on MilfyMadness!`} />
+        <title>{`${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} Porn Videos - SpankBang`}</title>
+        <meta name="description" content={`Watch ${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} porn videos. Explore tons of XXX movies with sex scenes in ${getcurrentyear()} on SpankBang!`} />
+        <meta property="og:title" content={`${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} Porn Videos - SpankBang | ${currentPageNumberURL}`} />
+        <meta property="og:description" content={`Watch ${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} porn videos. Explore tons of XXX movies with sex scenes in ${getcurrentyear()} on SpankBang!`} />
+        <meta name="twitter:title" content={`${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} Porn Videos - SpankBang | ${currentPageNumberURL}`} />
+        <meta name="twitter:description" content={`Watch ${capitalizeFirstLetter(searchkey.replace('+', " ").replace("+", " "))} porn videos. Explore tons of XXX movies with sex scenes in ${getcurrentyear()} on SpankBang!`} />
         G
         {/* Additional meta tags */}
-        <link rel="canonical" href={`https://www.milfymadness.com/search/${searchkey}`} />
+        <link rel="canonical" href={`https://www.spankbang.gg/search/${searchkey}`} />
       </Head>
 
       <Header keyword={searchkey.replace("+", " ")} pageNumber={currentPageNumberURL} />

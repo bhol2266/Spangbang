@@ -129,13 +129,13 @@ function Index({ video_collection, trendingChannels, newChannels }) {
 
                 <Head>
 
-                    <title>Top Porn Channels: Leading Sex Video Producers & Creators | MilfyMadness</title>
-                    <meta name="description" content="Explore an extensive catalog of the top porn tube channels featuring talented sex video producers and XXX creators. Discover complimentary films from your preferred adult paysites on MilfyMadness!" />
-                    <meta property="og:title" content="Top Porn Channels: Leading Sex Video Producers & Creators | MilfyMadness" />
-                    <meta property="og:description" content="Explore an extensive catalog of the top porn tube channels featuring talented sex video producers and XXX creators. Discover complimentary films from your preferred adult paysites on MilfyMadness!" />
-                    <meta name="twitter:title" content="Top Porn Channels: Leading Sex Video Producers & Creators | MilfyMadness" />
-                    <meta name="twitter:description" content="Explore an extensive catalog of the top porn tube channels featuring talented sex video producers and XXX creators. Discover complimentary films from your preferred adult paysites on MilfyMadness!" />
-                    <link rel="canonical" href={`https://www.milfymadness.com/channels`} />
+                    <title>Top Porn Channels: Leading Sex Video Producers & Creators | SpankBang</title>
+                    <meta name="description" content="Explore an extensive catalog of the top porn tube channels featuring talented sex video producers and XXX creators. Discover complimentary films from your preferred adult paysites on SpankBang!" />
+                    <meta property="og:title" content="Top Porn Channels: Leading Sex Video Producers & Creators | SpankBang" />
+                    <meta property="og:description" content="Explore an extensive catalog of the top porn tube channels featuring talented sex video producers and XXX creators. Discover complimentary films from your preferred adult paysites on SpankBang!" />
+                    <meta name="twitter:title" content="Top Porn Channels: Leading Sex Video Producers & Creators | SpankBang" />
+                    <meta name="twitter:description" content="Explore an extensive catalog of the top porn tube channels featuring talented sex video producers and XXX creators. Discover complimentary films from your preferred adult paysites on SpankBang!" />
+                    <link rel="canonical" href={`https://www.spankbang.gg/channels`} />
 
 
 
