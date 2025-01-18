@@ -2,9 +2,9 @@ User-agent: *
 Disallow: /pornstar/query
 Disallow: /search/query   
 Disallow: /category/query
-Disallow: http://MilfyMadness.com/
-Disallow: https://MilfyMadness.com/
+Disallow: http://SpankBang.gg/
+Disallow: https://SpankBang.gg/
 Allow: /
 
 
-Sitemap: https://www.MilfyMadness.com/sitemap.xml
+Sitemap: https://www.SpankBang.gg/sitemap.xml

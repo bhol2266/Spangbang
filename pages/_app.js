@@ -72,20 +72,20 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/logo.png" />
-        <meta name="google-site-verification" content="OwcdmtgnWuCidVEu_oPS6eQhmgssoZVQXXPv-BGHVRE" />
-        <meta name="clckd" content="989abd1ff7e1399f3e4fc8bef01007d3" />
+        <meta name="google-site-verification" content="xcak_WrJDBj_8MRzbc461J6CQAXZkt5t7zLe34AaeI8" />   
+             <meta name="clckd" content="989abd1ff7e1399f3e4fc8bef01007d3" />
         <meta name="6a97888e-site-verification" content="8fe8681a16b3f9b5b28f489ea558e57d" />          </Head>
 
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-4F2V2LG2WF"
+        src="https://www.googletagmanager.com/gtag/js?id=G-YNGE1BX4YW"
       />
 
       <Script id="gtm-script" strategy="afterInteractive">
         {` window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-4F2V2LG2WF');`}
+        gtag('config', 'G-YNGE1BX4YW');`}
       </Script>
 
       <AuthContextProvider>
