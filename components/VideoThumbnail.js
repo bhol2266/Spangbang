@@ -54,7 +54,7 @@ function VideoThumbnail({ details, type }) {
 
     return (
         <div>
-            <a href={`https://www.cumzcraze.com/video/${keyy}*${title}`} onClick={onClickHandler} data-title={video.title}>
+            <a href={`https://www.cumcraze.com/video/${keyy}*${title}`} onClick={onClickHandler} data-title={video.title}>
                 <div className="animate-fade flex flex-col items-start justify-center cursor-pointer rounded-md overflow-hidden transform transition duration-150 mb-3 2xl:mb-4">
                     <div className={`relative w-full overflow-hidden  ${viewType === "grid" ? "aspect-custom md:aspect-video" : "aspect-video"} ${containsBannedKeywords ? "hidden" : ""}`}>
                         <img
