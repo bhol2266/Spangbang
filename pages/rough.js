@@ -5,16 +5,7 @@ function rough() {
 
         <div className="">
  
-            {/* <a href="/category">Click me</a> */}
-
-
-            <Script
-                src="/sc.js"
-                strategy="lazyOnload"
-                onLoad={() => {
-                    console.log("Popunder Ad configuration script loaded successfully.");
-                }}
-            />
+        YAY! This is a rough page. You can add your content here.
 
         </div>
 
