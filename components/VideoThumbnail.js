@@ -92,7 +92,7 @@ function VideoThumbnail({ details, type }) {
 
 
         <div>
-            <a className="block" href={`/video/${keyy}*${title}`} onClick={onClickHandler}>
+            <a className="block" href={`https://www.milfymadness.com/video/${keyy}*${title}`} onClick={onClickHandler}>
 
                 <div className="animate-fade flex flex-col items-start justify-center cursor-pointer rounded-md overflow-hidden transform transition duration-150 mb-3 2xl:mb-4">
                     <div className={`relative w-full overflow-hidden ${viewType === "grid" ? "aspect-custom md:aspect-video" : "aspect-video"}`}>
