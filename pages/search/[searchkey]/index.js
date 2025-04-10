@@ -80,7 +80,7 @@ export async function getServerSideProps(context) {
   if (searchkey == "bbc") {
 
     const parcelData = { url: `https://spankbang.party/s/${searchkey.toLowerCase().trim()}/?o=all` };
-    const API_URL = `${process.env.BACKEND_URL}getvideos`;
+    const API_URL = `${process.env.BACKEND_URL}getVideos`;
 
     const rawResponse = await fetch(API_URL, {
       headers: {
@@ -92,6 +92,7 @@ export async function getServerSideProps(context) {
     });
 
     const { finalDataArray, pages } = await rawResponse.json();
+
 
     return {
       props: {

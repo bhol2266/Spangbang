@@ -24,6 +24,7 @@ import Link from 'next/link';
 var navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Category', href: '/category', current: false },
+    { name: 'Creators', href: '/creators', current: false },
     { name: 'Pornstars', href: '/pornstar', current: false },
     { name: 'Channels', href: '/channels', current: false },
     { name: 'Sex Chat', href: 'https://play.google.com/store/apps/details?id=com.bhola.livevideochat4&hl=en-IN', current: false },
@@ -31,6 +32,7 @@ var navigation = [
     // { name: 'Live Cams', href: "https://chaturbate.com/in/?tour=LQps&campaign=3v7pk&track=default&room=ukdevelopers", current: false },
     // { name: 'Meet & Fuck', href: "https://chaturbate.com/in/?tour=LQps&campaign=3v7pk&track=default&room=ukdevelopers", current: false },
 ]
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')

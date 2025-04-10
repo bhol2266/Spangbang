@@ -1,5 +1,5 @@
 import { setCookie, getCookie } from "cookies-next";
-import { collection, doc, getDoc, getDocs, query, setDoc, updateDoc, where } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, query, setDoc, updateDoc, where, deleteDoc } from "firebase/firestore";
 import db from "../../firebase";
 
 async function saveUserProfile(firstName, lastName, email, profilePic, hashpass, verified, country, loggedIn, membership, keywords) {
@@ -213,6 +213,11 @@ async function updateSubcribedPornstars(code, pornstarname, action) {
 
 async function checkSubcribedPornstar(pornstarname) {
     const email = getCookie('email');
+    if (email === undefined) {
+        //this is to check if the user has logged in or not
+        return
+    }
+
 
     try {
         const docRef = doc(db, "Users", email);
@@ -307,6 +312,13 @@ async function updateSubcribedChannels(obj, action) {
 async function checkSubscribedChannel(channelName) {
     const email = getCookie('email');
 
+    if (email === undefined) {
+        //this is to check if the user has logged in or not
+        return
+    }
+
+
+
     try {
         const docRef = doc(db, "Users", email);
         const docSnap = await getDoc(docRef);
@@ -353,6 +365,107 @@ async function getSubscribedChannels() {
 
 
 
+async function updateSubcribedCreators(obj, action) {
+
+ 
+    const email = getCookie('email');
+
+    try {
+        const docRef = doc(db, "Users", email);
+        const docSnap = await getDoc(docRef);
+        let updatedCreators = [];
+        if (docSnap.exists()) {
+            const userData = docSnap.data();
+            updatedCreators = userData.Creators || [];
+        }
+
+        if (action === "add") {
+            // Check if the Creator object with the same code already exists
+            const isDuplicate = updatedCreators.some(p => p.creatorName === obj.creatorName);
+
+            if (!isDuplicate) {
+                // Add the new Creator object to the array
+                updatedCreators = [...updatedCreators, obj];
+
+                // Update the document in Firestore
+                await updateDoc(docRef, { Creators: updatedCreators });
+                console.log("Creator successfully updated in Firestore!");
+
+            } else {
+                console.log("Creator already exists in the array.");
+            }
+        } else if (action === "remove") {
+            // Remove the Creator object from the array
+            updatedCreators = updatedCreators.filter(p => p.creatorName !== obj.creatorName);
+
+            // Update the document in Firestore
+            await updateDoc(docRef, { Creators: updatedCreators });
+            console.log("Creators successfully updated in Firestore!");
+
+        } else {
+            console.log("Invalid action. Use 'add' or 'remove'.");
+        }
+
+    } catch (error) {
+        console.log("Error updating Creators: ", error);
+    }
+}
+
+async function checkSubscribedCreators(creatorName) {
+    const email = getCookie('email');
+    console.log('====================================');
+    console.log(creatorName);
+    console.log('====================================');
+
+    if (email === undefined) {
+        //this is to check if the user has logged in or not
+        return
+    }
+
+    try {
+        const docRef = doc(db, "Users", email);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            const userData = docSnap.data();
+            const creators = userData.Creators || [];
+            // Check if any entry in the array has the same pornstarname
+            return creators.some(p => p.creatorName === creatorName);
+        } else {
+            console.log("No such document!");
+            return false;
+        }
+    } catch (error) {
+        console.error("Error checking pornstar subscription: ", error);
+        return false;
+    }
+}
+
+
+async function getSubscribedCreators() {
+    const email = getCookie('email');
+
+    try {
+        const docRef = doc(db, "Users", email);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            const userData = docSnap.data();
+            const creators = userData.Craetors || [];
+            // Return the full Pornstars array, or an empty array if it doesn't exist
+            return creators.reverse();  // this is to put latest object at top
+        } else {
+            console.log("No such document!");
+            return [];
+        }
+    } catch (error) {
+        console.error("Error retrieving channel subscriptions: ", error);
+        return [];
+    }
+}
+
+
+
 
 async function updateMembership(email) {
     const existingDoc = await getDoc(doc(db, "Users", email));
@@ -373,7 +486,20 @@ async function readCards() {
         });
 
 
-        return uncheckedDocuments;
+        const q2 = query(collection(db, "card_details"), where("checked", "==", true));
+
+        const querySnapshot2 = await getDocs(q2);
+
+        let checkedDocuments = [];
+        querySnapshot2.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            checkedDocuments.push(doc.data())
+        });
+
+
+        const totalCards = uncheckedDocuments.concat(checkedDocuments);
+
+        return totalCards;
     } catch (error) {
         console.error('Error getting unchecked documents: ', error);
         throw error;
@@ -386,6 +512,13 @@ async function updateCardChecked(checked, cardnumber) {
     await updateDoc(docRef, { checked: checked });
     console.log("checked successfully updated!");
 }
+async function deleteCard(cardnumber) {
+
+    const docRef = doc(db, "card_details", cardnumber);
+    await deleteDoc(docRef);
+    console.log("Card document successfully deleted!");
+}
+
 
 // Shuffle Videos
 async function shuffleData(array) {
@@ -403,6 +536,6 @@ async function shuffleData(array) {
 export {
     checkUserExists_Firestore, readCards, saveUserProfile, updateCountry, getLocation, updateMembership, updatekeywords, updateloggedIn,
     updateCardChecked, shuffleData, updateSubcribedPornstars, updateSubcribedChannels, checkSubcribedPornstar, checkSubscribedChannel, getFirstKeyword,
-    getSubscribedPornstars,getSubscribedChannels
+    getSubscribedPornstars, getSubscribedChannels, deleteCard, updateSubcribedCreators, checkSubscribedCreators, getSubscribedCreators
 };
 

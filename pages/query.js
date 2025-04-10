@@ -1,16 +1,16 @@
 import { useRouter } from "next/router";
-import Sidebar from "../../components/Sidebar";
-import Videos from "../../components/Videos";
-import Header from '../../components/searchPage/Header'
+import Sidebar from "../components/Sidebar";
+import Videos from "../components/Videos";
+import Header from '../components/searchPage/Header'
 import { BeatLoader } from 'react-spinners'
 import { useContext, useState } from 'react';
-import videosContext from '../../context/videos/videosContext';
+import videosContext from '../context/videos/videosContext';
 import Router from 'next/router'
 import Head from 'next/head'
-import PaginationQuery from '../../components/PaginationQuery';
-import { scrapeVideos } from '../../config/spangbang';
+import PaginationQuery from '../components/PaginationQuery';
+import { scrapeVideos } from '../config/spangbang';
 
-function Category({ video_collection, pages, query, keyword, currentPage, filteredObjsArray }) {
+function HomepageQuery({ video_collection, pages, query, keyword, currentPage, filteredObjsArray }) {
 
 
 
@@ -45,7 +45,7 @@ function Category({ video_collection, pages, query, keyword, currentPage, filter
   )
 }
 
-export default Category
+export default HomepageQuery
 
 
 
@@ -102,17 +102,17 @@ export async function getServerSideProps(context) {
 
   if (filteredObjsArray.length > 0) {
 
-    const obj = await scrapeVideos(`https://spankbang.party/s/${searchkey}/${page}/?${completeSearch}`)
+    const obj = await scrapeVideos(`https://spankbang.party/trending_videos/${page}/?${completeSearch}`)
     finalDataArray = obj.finalDataArray
     pages = obj.pages
-    console.log(`https://spankbang.party/s/${searchkey}/${page}/?${completeSearch}`);
+    console.log(`https://spankbang.party/trending_videos/${page}/?${completeSearch}`);
   }
   else {
 
-    const obj = await scrapeVideos(`https://spankbang.party/s/${searchkey}/${page}/?o=all`)
+    const obj = await scrapeVideos(`https://spankbang.party/trending_videos/${page}/`)
     finalDataArray = obj.finalDataArray
     pages = obj.pages
-    console.log(`https://spankbang.party/s/${searchkey}/${page}/?o=all`);
+    console.log(`https://spankbang.party/trending_videos/${page}/`);
 
   }
 

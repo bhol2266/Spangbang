@@ -146,7 +146,7 @@ function Index({ video_collection, trendingChannels, newChannels }) {
                 <div className={` mt-4  transition ease-in-out delay-150 `}>
                     <div className='flex my-1  md:w-3/5 md:mx-auto p-2 px-3  border-[1px] border-gray-100 space-x-2 md:space-x-4 xl:px-[50px] rounded-[15px]'  >
                         <SearchIcon className='h-6 w-6 text-gray-400' />
-                        <input className='focus:outline-none flex-grow  font-inter rounded-lg bg-transparent' type='text' onChange={(event) => { onChangeHandler(event.target.value) }} placeholder='Search channel...'></input>
+                        <input className='focus:outline-none flex-grow text-gray-300  font-inter rounded-lg bg-transparent' type='text' onChange={(event) => { onChangeHandler(event.target.value) }} placeholder='Search channel...'></input>
                     </div>
                 </div>
 

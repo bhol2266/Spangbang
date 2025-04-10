@@ -103,6 +103,51 @@ export function getViewChannels() {
     return viewChannels
 }
 
+export function updateViewCreators_Cookie(creatorData) {
+    // Retrieve existing viewChannels from the cookie or initialize it as an empty array
+    let viewCreators = getCookie('viewCreators');
+
+    // If viewChannels is undefined or null, initialize it as an empty array
+    if (!viewCreators) {
+        viewCreators = [];
+    } else if (typeof viewCreators === 'string') {
+        // If viewChannels is a string (due to the way cookies are stored), parse it into an array
+        viewCreators = JSON.parse(viewCreators);
+    }
+
+    // If creatorData is provided
+    if (creatorData) {
+        // Find the index of the channel object with the same channel_name
+        const existingIndex = viewCreators.findIndex(ch => ch.creatorName === creatorData.creatorName);
+
+        if (existingIndex !== -1) {
+            // If the channel already exists, remove it from its current position
+            viewCreators.splice(existingIndex, 1);
+        }
+
+        // Add the new channel object to the beginning of the array
+        viewCreators.unshift(creatorData);
+    }
+
+    // Save the updated viewChannels array back to the cookie
+    setCookie('viewCreators', JSON.stringify(viewCreators));
+}
+
+export function getViewCreators() {
+    // Retrieve viewCreators from the cookie
+    let viewCreators = getCookie('viewCreators');
+
+    // If viewCreators is undefined or null, initialize it as an empty array
+    if (!viewCreators) {
+        viewCreators = [];
+    } else if (typeof viewCreators === 'string') {
+        // If viewCreators is a string (due to the way cookies are stored), parse it into an array
+        viewCreators = JSON.parse(viewCreators);
+    }
+
+    return viewCreators
+}
+
 
 
 

@@ -1,56 +1,43 @@
-import Head from 'next/head';
-import { useRouter } from "next/router";
 import PaginationQuery from '../../components/PaginationQuery';
-import Sidebar from "../../components/Sidebar";
+import Header from '../../components/Pornstar_Channels/Header';
 import Videos from "../../components/Videos";
-import Header from '../../components/searchPage/Header';
 import { scrapeVideos } from '../../config/spangbang';
 
-function Category({ video_collection, pages, query, keyword, currentPage, filteredObjsArray }) {
+function CreatorsQuery({ video_collection, pages, query, keyword, currentPage, filteredObjsArray, code }) {
 
-
-
-  const router = useRouter();
   const currentPageNumberURL = currentPage
-
-  function capitalizeFirstLetter(string) {
-    
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
 
   return (
 
-    <div className="">
+    <>
 
       <div>
 
-        <Header keyword={keyword} pageNumber={currentPageNumberURL} filteredObjsArrayProps={filteredObjsArray} />
-        <div className="flex">
-          {/* <Sidebar /> */}
-          <Videos data={video_collection} />
+        <Header keyword={keyword} pageNumber={currentPageNumberURL} filteredObjsArrayProps={filteredObjsArray} code={code} />
+        <Videos data={video_collection} />
 
-
-        </div>
 
 
         {/* PAGINATION */}
-        <PaginationQuery data={{ keyword: keyword, pathname: `/category/query/`, currentPageNumberURL: currentPageNumberURL, pages: pages, filteredObjsArray: filteredObjsArray }} />
-
+        <PaginationQuery data={{ keyword: keyword, pathname: `/creators/query/`, currentPageNumberURL: currentPageNumberURL, pages: pages, filteredObjsArray: filteredObjsArray, code: code }} />
 
       </div>
 
 
-    </div>
+    </>
   )
 }
 
-export default Category
+export default CreatorsQuery
 
 
 
 
 export async function getServerSideProps(context) {
-  const { category, page } = context.query;
+  const { creatorName, page, creatorCode } = context.query;
+
+
+
   var finalDataArray = []
   var pages = []
 
@@ -61,7 +48,7 @@ export async function getServerSideProps(context) {
   var completeSearch = ''
   if (o) {
     filteredObjsArray.push(`o=${o}`)
-  } 
+  }
   if (q) {
     filteredObjsArray.push(`q=${q}`)
 
@@ -95,20 +82,23 @@ export async function getServerSideProps(context) {
 
 
 
-
   if (filteredObjsArray.length > 0) {
 
-    const obj = await scrapeVideos(`https://spankbang.party/s/${category}/${page}/?${completeSearch}`)
+    const obj = await scrapeVideos(`https://spankbang.party/${creatorCode}/creator/${creatorName.replace(' ', '+').toLowerCase()}/${page}/?${completeSearch}`)
     finalDataArray = obj.finalDataArray
     pages = obj.pages
-    console.log(`https://spankbang.party/s/${category}/${page}/?${completeSearch}`);
+    pages[0] = page;
+    console.log(`https://spankbang.party/${creatorCode}/creator/${creatorName.replace(' ', '+').toLowerCase()}/${page}/?${completeSearch}`);
   }
   else {
 
-    const obj = await scrapeVideos(`https://spankbang.party/s/${category}/${page}/?o=all`)
+    const obj = await scrapeVideos(`https://spankbang.party/${creatorCode}/creator/${creatorName.replace(' ', '+').toLowerCase()}/${page}/?o=all`)
     finalDataArray = obj.finalDataArray
     pages = obj.pages
-    console.log(`https://spankbang.party/s/${category}/${page}/?o=all`);
+    pages[0] = page;
+
+    console.log(`https://spankbang.party/${creatorCode}/channel/${creatorName.replace(' ', '+').toLowerCase()}/${page}/?o=all`);
+
 
   }
 
@@ -117,14 +107,13 @@ export async function getServerSideProps(context) {
       video_collection: finalDataArray,
       pages: pages,
       query: filteredObjsArray,
-      keyword: category,
+      keyword: creatorName,
       currentPage: page,
-      filteredObjsArray: filteredObjsArray
+      filteredObjsArray: filteredObjsArray,
+      code: creatorCode
     }
   }
 
 
 }
-
-
 

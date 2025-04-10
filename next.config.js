@@ -22,7 +22,7 @@ module.exports = {
   }, 
   env: {
     CLOUDFLARE_STORAGE: 'https://pub-46cdeefeaf774247ab99232ab1ebaa66.r2.dev/',
-    BACKEND_URL: 'https://my-worker.ukdevelopers007.workers.dev/',
+    BACKEND_URL: 'https://cloudflare-workers-project.ukdevelopers007.workers.dev/chutlunds/',
     FRONTEND_URL: 'https://www.MilfyMadness.com/',
     // FRONTEND_URL: 'http://localhost:3000/',
     REDIRECT_URI: "http://localhost:3000/api/auth/callback",
